@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace DevShaded\NvdbSpeedLimits\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class NvdbSpeedLimitsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'nvdb-speed-limits';
 
     public $description = 'My command';
 

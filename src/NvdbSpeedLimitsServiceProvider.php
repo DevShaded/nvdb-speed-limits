@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace DevShaded\NvdbSpeedLimits;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use DevShaded\NvdbSpeedLimits\Commands\NvdbSpeedLimitsCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class NvdbSpeedLimitsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('nvdb-speed-limits')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_migration_table_name_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_nvdb_speed_limits_table')
+            ->hasCommand(NvdbSpeedLimitsCommand::class);
     }
 }
