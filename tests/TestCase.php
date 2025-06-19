@@ -2,9 +2,9 @@
 
 namespace DevShaded\NvdbSpeedLimits\Tests;
 
+use DevShaded\NvdbSpeedLimits\NvdbSpeedLimitsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use DevShaded\NvdbSpeedLimits\NvdbSpeedLimitsServiceProvider;
 
 class TestCase extends Orchestra
 {

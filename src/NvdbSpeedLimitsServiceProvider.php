@@ -2,9 +2,9 @@
 
 namespace DevShaded\NvdbSpeedLimits;
 
+use DevShaded\NvdbSpeedLimits\Commands\NvdbSpeedLimitsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use DevShaded\NvdbSpeedLimits\Commands\NvdbSpeedLimitsCommand;
 
 class NvdbSpeedLimitsServiceProvider extends PackageServiceProvider
 {
