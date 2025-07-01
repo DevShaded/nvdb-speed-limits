@@ -4,7 +4,6 @@ namespace DevShaded\NvdbSpeedLimits;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use DevShaded\NvdbSpeedLimits\Commands\NvdbSpeedLimitsCommand;
 
 class NvdbSpeedLimitsServiceProvider extends PackageServiceProvider
 {
@@ -17,9 +16,18 @@ class NvdbSpeedLimitsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('nvdb-speed-limits')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_nvdb_speed_limits_table')
-            ->hasCommand(NvdbSpeedLimitsCommand::class);
+            ->hasConfigFile();
+    }
+
+    public function packageRegistered(): void
+    {
+        // Register the main class as a singleton
+        $this->app->singleton(NvdbSpeedLimits::class, function ($app) {
+            return new NvdbSpeedLimits;
+        });
+
+        // Register the facade aliases
+        $this->app->alias(\DevShaded\NvdbSpeedLimits\Facades\NvdbSpeedLimits::class, 'NvdbSpeedLimits');
+        $this->app->alias(NvdbSpeedLimits::class, 'nvdb-speed-limits');
     }
 }

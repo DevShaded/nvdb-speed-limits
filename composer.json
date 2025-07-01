@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DevShaded\\NvdbSpeedLimits\\": "src/",
-            "DevShaded\\NvdbSpeedLimits\\Database\\Factories\\": "database/factories/"
+            "DevShaded\\NvdbSpeedLimits\\": "src/"
         }
     },
     "autoload-dev": {
